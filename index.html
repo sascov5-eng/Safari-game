@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Платформер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui">
+            <div id="score">Монеты: 0</div>
+            <div id="lives">Жизни: 3</div>
+        </div>
+        <div id="gameOver" class="hidden">
+            <h2>Игра окончена!</h2>
+            <p>Собрано монет: <span id="finalScore">0</span></p>
+            <button id="restartBtn" onclick="restartGame()">Играть снова</button>
+        </div>
+        <div id="controls">
+            <button id="leftBtn" class="control-btn">←</button>
+            <button id="jumpBtn" class="control-btn">↑</button>
+            <button id="rightBtn" class="control-btn">→</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
