@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: #0F1117;
+    color: #F5EFE6;
+    overflow: hidden;
+    touch-action: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#gameContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameCanvas {
+    display: block;
+    background: #171A23;
+    border: 2px solid #1E222E;
+    max-width: 100%;
+    max-height: calc(100vh - 120px);
+}
+
+#ui {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+#score {
+    color: #FBBF24;
+}
+
+#lives {
+    color: #F87171;
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1E222E;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 20;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+#gameOver h2 {
+    color: #F87171;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+#gameOver p {
+    color: #F5EFE6;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+#finalScore {
+    color: #FBBF24;
+    font-weight: 700;
+}
+
+#restartBtn {
+    background: #5B8CFF;
+    color: #F5EFE6;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#restartBtn:active {
+    background: #4A7AEE;
+    transform: scale(0.98);
+}
+
+.hidden {
+    display: none !important;
+}
+
+#controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.control-btn {
+    width: 70px;
+    height: 70px;
+    background: rgba(30, 34, 46, 0.9);
+    border: 2px solid #5B8CFF;
+    border-radius: 8px;
+    color: #5B8CFF;
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.control-btn:active {
+    background: rgba(91, 140, 255, 0.3);
+    transform: scale(0.95);
+}
+
+@media (min-width: 768px) {
+    #controls {
+        display: none;
+    }
+}
